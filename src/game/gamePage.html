@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Tetris</title>
+    <link rel="stylesheet" href="css/gamePage.css" type="text/css">
+</head>
+<body>
+    <audio id="audio">
+        <source src ="../music/Playboi-Carti-Vamp-Anthem.mp3">
+    </audio>
+    <header id = "header">
+        <div id="header_container">
+            <img  id="head_image" src="../images/R.png" alt="tetris image" width="250">
+        </div>
+    </header>
+    <hr id="separate">
+    <main>
+        <div class = "game_place_container">
+            <button id="mute_button" onclick="this.blur();">Mute</button>
+            <div class = "canvas_container">
+                <canvas class = "game_field" height="510" width = "300"></canvas>
+            </div>
+            <div class = "side_panel">
+                <div id= 'next_figure_container'>
+                    <canvas id = 'next_figure' height="150" width = "150"></canvas>
+                </div>
+                <table id="leaderboard">
+                    <caption>Таблица лидеров</caption>
+                    <thead>
+                    <tr>
+                        <td>Игрок</td>
+                        <td>Рекорд</td>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr id>
+                        <td id="1_name"></td>
+                        <td id="1_score"></td>
+                    </tr>
+                    <tr>
+                        <td id="2_name"></td>
+                        <td id="2_score"></td>
+                    </tr>
+                    <tr>
+                        <td id="3_name"></td>
+                        <td id="3_score"></td>
+                    </tr>
+                    <tr>
+                        <td id="4_name"></td>
+                        <td id="4_score"></td>
+                    </tr>
+                    <tr>
+                        <td id="5_name"></td>
+                        <td id="5_score"></td>
+                    </tr>
+                    </tbody>
+                </table>
+                <div id = "current_record_container">
+                    <p>Текущий рекорд</p>
+                    <div id = "current_record"></div>
+                </div>
+                <div id = "current_level_container">
+                    <p>Текущий уровень</p>
+                    <div id = "current_level"></div>
+                </div>
+                <button id = "startButton">Старт</button>
+                <button id = "exitButton">Главное Меню</button>
+            </div>
+        </div>
+    </main>
+    <script src="script/Figure.js" type="application/javascript"></script>
+    <script src="script/Field.js" type="application/javascript"></script>
+    <script src="script/Generator.js" type="application/javascript"></script>
+    <script src="../script/LocalStorageManager.js" type="application/javascript"></script>
+    <script src="script/gamePage.js" type="application/javascript"></script>
+</body>
+</html>
